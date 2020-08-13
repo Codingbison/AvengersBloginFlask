@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="banner">
+    <h1 class="header_text">This is Avengers Book</h1>
+</header>
+<h1>Hello {{ customer_name }}</h1>
+<p>{{ order_number }}</p>
+
+<h2>Hello there! {{ current_user.username }}</h2>
+<ul>
+{% for key,item in item_dict.items() %}
+    <li>{{ key }} - {{ item }}</li>
+{% endfor %}
+</ul>
+{% endblock content %}
